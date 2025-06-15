@@ -23,7 +23,12 @@ export default function RootLayout() {
   // useAppState(onAppStateChange);
   return (
     <QueryClientProvider client={queryClient}>
-      <Stack />
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="email" options={{ headerShown: false }} />
+        <Stack.Screen name="code" options={{ headerShown: false }} />
+        <Stack.Screen name="password" options={{ title: "Sign up" }} />
+      </Stack>
     </QueryClientProvider>
   );
 }
